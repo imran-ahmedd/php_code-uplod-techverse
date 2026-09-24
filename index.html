@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imran Ahmed — Web Developer</title>
+<meta name="description" content="Imran Ahmed — Independent web developer building premium PWAs, Quran apps, and browser-based tools with vanilla JavaScript and Firebase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="star-field" id="starField"></div>
+
+<header>
+  <nav>
+    <div class="logo-mark">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 5 L61 39 L97 39 L68 60 L79 95 L50 74 L21 95 L32 60 L3 39 L39 39 Z" stroke="#c9a15a" stroke-width="3"/>
+      </svg>
+      <span>IMRAN AHMED</span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#projects"><span data-i18n-bn>প্রজেক্ট</span><span data-i18n-en>Projects</span></a>
+        <a href="#about"><span data-i18n-bn>সম্পর্কে</span><span data-i18n-en>About</span></a>
+        <a href="#contact"><span data-i18n-bn>যোগাযোগ</span><span data-i18n-en>Contact</span></a>
+      </div>
+      <div class="lang-toggle">
+        <button id="btn-bn" class="active">বাং</button>
+        <button id="btn-en">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">
+        <span data-i18n-bn>ইন্ডিপেন্ডেন্ট ওয়েব ডেভেলপার · বাংলাদেশ</span>
+        <span data-i18n-en>Independent Web Developer · Bangladesh</span>
+      </div>
+      <h1 class="font-display">
+        <span data-i18n-bn class="block">ইমরান আহমেদ</span>
+        <span data-i18n-en class="block">Imran Ahmed</span>
+      </h1>
+      <p class="tagline">
+        <span data-i18n-bn>প্রিমিয়াম ওয়েব অভিজ্ঞতা তৈরি করি — কুরআন অ্যাপ থেকে শুরু করে পরীক্ষা প্ল্যাটফর্ম পর্যন্ত, প্রতিটি লাইন ভ্যানিলা জাভাস্ক্রিপ্ট আর ফায়ারবেস দিয়ে, কোনো ফ্রেমওয়ার্ক ছাড়াই।</span>
+        <span data-i18n-en>I build premium web experiences — from Quran apps to exam platforms — every line written in vanilla JavaScript and Firebase, no frameworks, no shortcuts.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span data-i18n-bn>প্রজেক্টগুলো দেখুন</span>
+          <span data-i18n-en>View Projects</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span data-i18n-bn>যোগাযোগ করুন</span>
+          <span data-i18n-en>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-portrait" aria-hidden="false">
+      <svg class="portrait-seal" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M110 8 L127 78 L200 78 L141 118 L163 190 L110 146 L57 190 L79 118 L20 78 L93 78 Z" stroke="#c9a15a" stroke-width="1.4"/>
+        <circle cx="110" cy="110" r="104" stroke="#c9a15a" stroke-width="1" stroke-dasharray="2 6"/>
+      </svg>
+      <div class="portrait-frame">
+        <img
+          src="images/profile.jpg"
+          alt="Imran Ahmed"
+          class="portrait-img"
+          width="360" height="360"
+          loading="eager"
+          fetchpriority="high"
+          onerror="this.closest('.hero-portrait').classList.add('portrait-fallback')">
+        <div class="portrait-initials" aria-hidden="true">IA</div>
+      </div>
+      <span class="portrait-caption">
+        <span data-i18n-bn>ইমরান আহমেদ</span>
+        <span data-i18n-en>Imran Ahmed</span>
+      </span>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="line"></div>
+    <span data-i18n-bn>স্ক্রল করুন</span>
+    <span data-i18n-en>SCROLL</span>
+  </div>
+</section>
+
+<section id="about" class="tight">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-i18n-bn>পরিচিতি</span><span data-i18n-en>Introduction</span></div>
+      <h2 class="font-display"><span data-i18n-bn>যা নিয়ে কাজ করি</span><span data-i18n-en>What I work on</span></h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>
+          <span data-i18n-bn>আমি বাংলাদেশ থেকে একজন স্বাধীন ওয়েব ডেভেলপার। <strong>ভ্যানিলা জাভাস্ক্রিপ্ট আর ফায়ারবেস</strong> দিয়ে শুরু থেকে শেষ পর্যন্ত ফিচার-সমৃদ্ধ পিডব্লিউএ এবং ব্রাউজার-বেজড টুল তৈরি করি — কোনো ফ্রেমওয়ার্ক নয়, প্রতিটি লাইন নিজের হাতে লেখা।</span>
+          <span data-i18n-en>I'm an independent web developer from Bangladesh. I build feature-rich PWAs and browser-based tools from the ground up with <strong>vanilla JavaScript and Firebase</strong> — no frameworks, every line written by hand.</span>
+        </p>
+        <p>
+          <span data-i18n-bn>আমার কাজের পরিধি একটা বাংলা কুরআন অ্যাপ থেকে শুরু করে একটা পূর্ণাঙ্গ কোলাবোরেটিভ ওয়েব আইডিই, একটা কমিউনিটি ফাউন্ডেশনের ওয়েবসাইট এবং ফায়ারবেস-চালিত এক্সাম প্ল্যাটফর্ম পর্যন্ত বিস্তৃত। প্রতিটি প্রজেক্টেই আমি সার্ভিস ওয়ার্কার, ইনডেক্সডবি, এবং ফায়ারস্টোর সিকিউরিটি রুলস নিয়ে গভীরভাবে কাজ করি, যাতে অ্যাপগুলো অফলাইনেও নির্ভরযোগ্য এবং দ্রুত থাকে।</span>
+          <span data-i18n-en>My work spans a feature-rich Bengali Quran app, a full collaborative web IDE, a community foundation's website, and a Firebase-powered exam platform. On every project I dig deep into service workers, IndexedDB, and Firestore security rules so the apps stay fast and reliable even offline.</span>
+        </p>
+        <p>
+          <span data-i18n-bn>আমি বিশ্বাস করি সম্পূর্ণ, পরিপাটি এবং "প্রিমিয়াম" ফিচার নিয়ে আসাটাই আসল কাজ — অর্ধেক করা কিছু নয়।</span>
+          <span data-i18n-en>I believe in shipping complete, polished, "premium" implementations — never half-done work.</span>
+        </p>
+      </div>
+      <div class="skills-panel">
+        <span class="label"><span data-i18n-bn>দক্ষতা ও টুলস</span><span data-i18n-en>Skills & Tools</span></span>
+        <div class="skill-tags">
+          <span>Vanilla JavaScript</span>
+          <span>Firebase & Firestore</span>
+          <span>PWA / Service Workers</span>
+          <span>IndexedDB</span>
+          <span>Firebase Auth</span>
+          <span>Web IDE Tooling</span>
+          <span>GitHub OAuth & Pages</span>
+          <span>Canvas Animation</span>
+          <span>Bengali-first UX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-i18n-bn>সিলেক্টেড ওয়ার্ক</span><span data-i18n-en>Selected Work</span></div>
+      <h2 class="font-display"><span data-i18n-bn>প্রজেক্টসমূহ</span><span data-i18n-en>Projects</span></h2>
+      <p><span data-i18n-bn>নিচের প্রতিটি প্রজেক্টই ডিজাইন থেকে ডিপ্লয়মেন্ট পর্যন্ত সম্পূর্ণভাবে নিজে তৈরি ও পরিচালনা করা।</span><span data-i18n-en>Every project below was designed, built, and deployed independently, end to end.</span></p>
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <span class="project-index">01</span>
+        <h3><span data-i18n-bn>কুরআন বাংলা (AlQuran PWA)</span><span data-i18n-en>QuranBangla (AlQuran PWA)</span></h3>
+        <p>
+          <span data-i18n-bn>ফিচার-সমৃদ্ধ বাংলা কুরআন পিডব্লিউএ — ওয়ার্ড-বাই-ওয়ার্ড অনুবাদ, তাফসির, হিফজ ট্র্যাকার, সিজদাহ চিহ্নিতকরণ এবং সম্পূর্ণ অফলাইন রিডিং সাপোর্ট।</span>
+          <span data-i18n-en>A feature-rich Bengali Quran PWA with word-by-word translation, tafsir, a hifz tracker, sajdah marking, and full offline reading support.</span>
+        </p>
+        <div class="project-tags"><span>PWA</span><span>Firebase</span><span>IndexedDB</span></div>
+        <a class="project-link" href="https://quranbangla.vercel.app" target="_blank" rel="noopener">quranbangla.vercel.app ↗</a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-index">02</span>
+        <h3>QuranView</h3>
+        <p>
+          <span data-i18n-bn>কুরআন পড়ার অভিজ্ঞতাকে কেন্দ্র করে তৈরি একটি সহায়ক প্ল্যাটফর্ম, পরিচ্ছন্ন রিডার-মোড এবং রিসাইটার অডিও সাপোর্টসহ।</span>
+          <span data-i18n-en>A companion Quran reading experience built around a clean reader mode with reciter audio support.</span>
+        </p>
+        <div class="project-tags"><span>PWA</span><span>Audio Streaming</span></div>
+        <a class="project-link" href="https://quranview.vercel.app" target="_blank" rel="noopener">quranview.vercel.app ↗</a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-index">03</span>
+        <h3>TechVerse</h3>
+        <p>
+          <span data-i18n-bn>কোলাবোরেটিভ ব্রাউজার-বেজড কোড আইডিই — লাইভ প্রিভিউ, ইন-ব্রাউজার টার্মিনাল, গিট প্যানেল, এবং গিটহাব পেজে সরাসরি ডিপ্লয়মেন্ট সাপোর্ট সহ।</span>
+          <span data-i18n-en>A collaborative browser-based code IDE with live preview, an in-browser terminal, a Git panel, and direct GitHub Pages deployment.</span>
+        </p>
+        <div class="project-tags"><span>Firestore</span><span>GitHub OAuth</span><span>Canvas</span></div>
+        <a class="project-link" href="https://techversesite.vercel.app" target="_blank" rel="noopener">techversesite.vercel.app ↗</a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-index">04</span>
+        <h3><span data-i18n-bn>রূপসা জনকল্যাণ ফাউন্ডেশন</span><span data-i18n-en>Rupsha Jonokollan Foundation</span></h3>
+        <p>
+          <span data-i18n-bn>একটি কমিউনিটি কল্যাণ ফাউন্ডেশনের জন্য মডুলার, রিয়েল-টাইম ডোনেশন আপডেটসহ পূর্ণাঙ্গ মাল্টি-পেজ ওয়েবসাইট।</span>
+          <span data-i18n-en>A full multi-page website for a community welfare foundation, built modular with real-time donation updates.</span>
+        </p>
+        <div class="project-tags"><span>Firestore</span><span>Modular CSS/JS</span></div>
+        <a class="project-link" href="https://rupshajonokollanfoundation.vercel.app" target="_blank" rel="noopener">rupshajonokollanfoundation.vercel.app ↗</a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-index">05</span>
+        <h3><span data-i18n-bn>রূপসা জেএফ</span><span data-i18n-en>Rupsha JF</span></h3>
+        <p>
+          <span data-i18n-bn>রূপসা ফাউন্ডেশনের অল্টারনেট/সংক্ষিপ্ত ডোমেইন — একই মিশন, দ্রুত অ্যাক্সেসের জন্য।</span>
+          <span data-i18n-en>The foundation's alternate short-form domain — same mission, quicker to share.</span>
+        </p>
+        <div class="project-tags"><span>Vercel</span><span>Static + Firestore</span></div>
+        <a class="project-link" href="https://rupshajf.vercel.app" target="_blank" rel="noopener">rupshajf.vercel.app ↗</a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-index">06</span>
+        <h3><span data-i18n-bn>আরও আসছে</span><span data-i18n-en>More in the works</span></h3>
+        <p>
+          <span data-i18n-bn>টেস্টোরা — একটি বাংলা ভাষার পরীক্ষা ও কুইজ প্ল্যাটফর্ম, ফায়ারবেসের উপর নির্মিত — এই মুহূর্তে চলমান।</span>
+          <span data-i18n-en>Testora — a Bengali-language exam & quiz platform built on Firebase — currently in active development.</span>
+        </p>
+        <div class="project-tags"><span data-i18n-bn>শীঘ্রই</span><span data-i18n-en>Coming soon</span></div>
+        <span class="project-link" style="opacity:0.6;"><span data-i18n-bn>প্রস্তুত হচ্ছে…</span><span data-i18n-en>In progress…</span></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tight">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-i18n-bn>যোগাযোগ</span><span data-i18n-en>Get in touch</span></div>
+      <h2 class="font-display"><span data-i18n-bn>চলুন কথা বলি</span><span data-i18n-en>Let's talk</span></h2>
+    </div>
+
+    <div class="contact-primary">
+      <div>
+        <h3>project.developer.tech@gmail.com</h3>
+        <p><span data-i18n-bn>নতুন প্রজেক্ট, সহযোগিতা, বা যেকোনো প্রশ্নের জন্য সরাসরি ইমেইল করুন।</span><span data-i18n-en>For new projects, collaborations, or any question — email directly.</span></p>
+      </div>
+      <a href="mailto:project.developer.tech@gmail.com" class="btn btn-primary">
+        <span data-i18n-bn>ইমেইল পাঠান</span><span data-i18n-en>Send an Email</span>
+      </a>
+    </div>
+
+    <div class="contact-grid">
+
+      <a class="contact-tile" href="https://github.com/imran-s-project" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.02 2.83-.02 3.22 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        <div><div class="name">GitHub</div><div class="handle">imran-s-project</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://facebook.com/techverse.eee.cse" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+        <div><div class="name">Facebook</div><div class="handle">techverse.eee.cse</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://youtube.com/@imran.ahmedd" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        <div><div class="name">YouTube</div><div class="handle">@imran.ahmedd</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://instagram.com/imran.ahmedddddd" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.25.07 1.63.07 4.81s-.01 3.56-.07 4.81c-.15 3.23-1.67 4.77-4.92 4.92-1.25.06-1.62.07-4.85.07-3.2 0-3.6 0-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.25-.07-1.62-.07-4.81s.01-3.56.07-4.81c.15-3.23 1.67-4.77 4.92-4.92C8.4 2.2 8.8 2.2 12 2.2zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 10.4a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm6.5-10.6a1.47 1.47 0 1 1-2.94 0 1.47 1.47 0 0 1 2.94 0z"/></svg>
+        <div><div class="name">Instagram</div><div class="handle">imran.ahmedddddd</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://x.com/imranahmed-bd" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2h3.32l-7.25 8.29L23 22h-6.66l-5.22-6.83L4.9 22H1.58l7.76-8.87L1 2h6.84l4.72 6.24L18.24 2zm-1.16 18h1.84L7.02 3.9H5.05L17.08 20z"/></svg>
+        <div><div class="name">X (Twitter)</div><div class="handle">@imranahmed-bd</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://vercel.com/imran-s-project" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L22 20 H2 Z"/></svg>
+        <div><div class="name">Vercel</div><div class="handle">imran-s-project</div></div>
+      </a>
+
+      <a class="contact-tile" href="mailto:project.developer.tech@gmail.com">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 .3V6l8 5.5L20 6v-.7l-8 5.2-8-5.2zM20 8.4l-7.4 4.8a1 1 0 0 1-1.2 0L4 8.4V19h16V8.4z"/></svg>
+        <div><div class="name">Gmail</div><div class="handle">project.developer.tech@gmail.com</div></div>
+      </a>
+
+      <a class="contact-tile" href="https://github.com/imran-s-project?tab=repositories" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.2 7.6 3.8L12 11.8 4.4 8 12 4.2zM4 9.9l7 3.5v7.4l-7-3.5V9.9zm9 10.9v-7.4l7-3.5v7.4l-7 3.5z"/></svg>
+        <div><div class="name"><span data-i18n-bn>সব প্রজেক্ট</span><span data-i18n-en>All Repositories</span></div><div class="handle">Imran's Project</div></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span data-i18n-bn>ডিজাইন ও তৈরি — ইমরান আহমেদ, ভালোবাসা <span class="heart">♥</span> দিয়ে</span>
+    <span data-i18n-en>Designed & built by Imran Ahmed, with <span class="heart">♥</span></span>
+    · © <span id="year"></span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
